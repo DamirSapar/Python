@@ -1,0 +1,6 @@
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+y.append("srawberry")
+thistuple = tuple(y)
+print(thistuple)
