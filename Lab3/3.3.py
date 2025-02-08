@@ -1,5 +1,3 @@
-
-# Task 3: Rectangle class inheriting from Shape
 class Shape:
     def area(self):
         return 0
@@ -13,6 +11,6 @@ class Rectangle(Shape):
         return self.length * self.width
 
 
-# Task 3
+
 r = Rectangle(4, 6)
-print("Rectangle area:", r.area())  # Output: 24
+print("Rectangle area:", r.area())  

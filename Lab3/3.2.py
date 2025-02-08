@@ -1,5 +1,3 @@
-
-# Task 2: Shape class and Square subclass
 class Shape:
     def area(self):
         return 0
@@ -12,6 +10,6 @@ class Square(Shape):
         return self.length ** 2
 
 
-# Task 2
+
 s = Square(5)
-print("Square area:", s.area())  # Output: 25
+print("Square area:", s.area())  

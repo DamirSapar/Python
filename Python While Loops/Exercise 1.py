@@ -2,8 +2,8 @@ i = 1
 while i < 16:
   print(i)
   i += 1
-i = 1
-while i < 6:
-  if i == 3:
+j = 1
+while j < 6:
+  if j == 3:
     break
-  i += 1
+  j += 1
