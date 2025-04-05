@@ -280,7 +280,8 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((640, 480))
     clock = pygame.time.Clock()
-    
+
+#Initialization of size,color,shape   
     radius = 15
     mode = 'blue'
     shape = 'circle'  
@@ -288,17 +289,15 @@ def main():
     
     while True:
         pressed = pygame.key.get_pressed()
-        
-        alt_held = pressed[pygame.K_LALT] or pressed[pygame.K_RALT]
+#Checkinf if ctrl is pressed
         ctrl_held = pressed[pygame.K_LCTRL] or pressed[pygame.K_RCTRL]
-        
+
+#Different exit methods       
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_w and ctrl_held:
-                    return
-                if event.key == pygame.K_F4 and alt_held:
                     return
                 if event.key == pygame.K_ESCAPE:
                     return
@@ -316,7 +315,7 @@ def main():
                     shape = 'square'
                 elif event.key == pygame.K_t:
                     shape = 'triangle'
-                elif event.key == pygame.K_e:
+                elif event.key == pygame.K_i:
                     shape = 'equilateral triangle'
                 elif event.key == pygame.K_o:
                     shape = 'rhombus'
@@ -324,7 +323,8 @@ def main():
                     shape = 'rectangle'
                 elif event.key == pygame.K_e:
                     shape = 'eraser'
-                
+
+#Changes in mouse size and movement                
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1: 
                     radius = min(200, radius + 1)
@@ -344,6 +344,7 @@ def main():
         pygame.display.flip()
         clock.tick(60)
 
+#Drawing figures
 def drawShape(screen, position, shape, color_mode, size):
     colors = {'blue': (0, 0, 255), 'red': (255, 0, 0), 'green': (0, 255, 0)}
     color = colors.get(color_mode, (255, 255, 255))
